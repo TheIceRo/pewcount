@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/TheIceRo/pewcount#readme",
   "dependencies": {
+    "google-auth-library": "^3.1.0",
+    "googleapis": "^37.2.0",
     "socialblade-data": "0.0.6"
   },
   "devDependencies": {
