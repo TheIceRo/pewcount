@@ -1,0 +1,32 @@
+{
+  "name": "pewcount",
+  "version": "1.0.0",
+  "description": "PewdiePie vs. T-Series counter",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheIceRo/pewcount.git"
+  },
+  "keywords": [
+    "pewdiepie",
+    "t-series",
+    "live",
+    "count",
+    "social-blade"
+  ],
+  "author": "IceRo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheIceRo/pewcount/issues"
+  },
+  "homepage": "https://github.com/TheIceRo/pewcount#readme",
+  "dependencies": {
+    "socialblade-data": "0.0.6"
+  },
+  "devDependencies": {
+    "electron": "^4.0.4"
+  }
+}
