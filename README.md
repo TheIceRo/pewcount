@@ -1,2 +1,2 @@
 # pewcount
-PewdiePie vs. T-Series live counter
+PewDiePie vs. T-Series live counter
