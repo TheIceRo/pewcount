@@ -1,10 +1,16 @@
 const remote = require('electron').remote;
+var fs = require("fs"), filename = process.argv[2];
 var maximized = false;
-var socialblade = require('socialblade-data');
 var request = require("request");
-
 let pewds = 0;
 let tseries = 0;
+let key;
+
+function loadKey(){
+    var data = fs.readFileSync("google-api.key","utf8");
+    key = data.toString();
+    console.log("loaded key: '"+key+"'");
+}
 
 function loadListeners(){
     var window = remote.getCurrentWindow();
@@ -45,7 +51,7 @@ function numberWithCommas(x) {
     return parts.join(".");
 }
 function loadChannelData(username,number){
-    var url = "https://www.googleapis.com/youtube/v3/channels?part=statistics"+"&forUsername="+username+"&key=AIzaSyBwZlzp5SRyVQfL0PQt1NmIwdmsvKG1Z3M";
+    var url = "https://www.googleapis.com/youtube/v3/channels?part=statistics"+"&forUsername="+username+"&key="+key;
 
     request({
         url: url,
@@ -80,5 +86,6 @@ function start(){
 }
 
 document.addEventListener("DOMContentLoaded",function(){
-    start();
+    loadKey();
+    setTimeout(start(),100);
 })
