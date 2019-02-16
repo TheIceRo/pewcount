@@ -1,0 +1,71 @@
+html,body{
+    height: 100%;
+}
+body{
+    color: #ffffff;
+    background-color: #F96161;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    user-select: none;
+}
+.title-bar{
+    -webkit-app-region: drag;
+    background-color: #953a3a; 
+    height: 40px;
+    padding: 0px 10px;
+}
+.title-bar .material-icons{
+    margin-left: 20px;
+}
+.title-bar li{
+    -webkit-app-region: no-drag;
+    display: inline-block;
+    float: right;
+    line-height: 1.7;
+    cursor: pointer;
+}
+.title-bar #title{
+    float: left;
+    line-height: 3;
+    font-size: 14px;
+}
+.title-bar #title i{
+    padding: 0px;
+    margin: 0px;
+    float: left;
+    line-height: 2.9;
+    font-size: 14px;
+}
+.sub-container{ 
+    height: 50%;
+    width: 100%;
+    flex: 1;
+    text-align: center;
+}
+.sub-container .channel-icon{
+    margin-top: 30px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: #953a3a;
+}
+.sub-container .channel-name{
+    font-size: 65px;
+}
+.sub-container .channel-subs{
+    user-select: text;
+    font-size: 35px;
+}
+.first{
+    position: relative;
+}
+.sub-diff-container{
+    background-color: #333333;
+    height: 30px;
+    width: 300px;
+    margin: 0px auto;
+    text-align: center;
+    line-height: 2;
+}
